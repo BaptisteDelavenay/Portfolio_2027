@@ -301,7 +301,7 @@ export const dataProjet = [
       "L'application a principalement été développée en PHP, avec Tailwind CSS pour l'interface. Pour garantir une expérience fluide et dynamique, j'ai utilisé JavaScript et l'API Fetch afin de gérer certaines interactions avec la base de données sans rechargement de page.",
     ],
     images: [imagesProjets.Hop1],
-    lien: "https://hop.baptistedelavenay.com",
+    lien: "https://github.com/BaptisteDelavenay/Hop",
   },
   // {
   //   id: "portfolio",
@@ -332,7 +332,7 @@ export const dataProjet = [
       "Les données du formulaire sont envoyées à un script PHP (qui récupère les données de la BDD) via AJAX pour actualiser les graphiques sans rafraîchir la page. L'interface utilise Chart.js pour la visualisation et Tailwind CSS pour le design. Un triangle rouge placé à côté du graphique prévient l'utilisateur si certaines données sont manquantes sur la période choisie.",
     ],
     images: [imagesProjets.Dashboard1, imagesProjets.Dashboard2],
-    lien: "https://dashboard.baptistedelavenay.com/",
+    lien: "https://github.com/BaptisteDelavenay/ClimateDashboard",
   },
   // {
   //   id: "maquette",

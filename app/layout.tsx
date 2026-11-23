@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${manrope.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-clip scroll-smooth">
+      <body className="min-h-full flex flex-col text-fg overflow-x-clip scroll-smooth">
         {children}
       </body>
     </html>

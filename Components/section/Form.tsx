@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 type Status = "idle" | "sending" | "success" | "error";
 
 const fieldClass =
-  "w-full rounded-lg border border-white/60 bg-white/40 px-4 py-3 backdrop-blur-md shadow-sm placeholder:text-neutral-500 focus:border-white focus:bg-white/60 focus:outline-none transition-colors disabled:opacity-60";
+  "w-full rounded-lg border border-white/60 bg-white/40 px-4 py-3 backdrop-blur-md shadow-sm placeholder:text-muted focus:border-white focus:bg-white/60 focus:outline-none transition-colors disabled:opacity-60";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -64,7 +64,7 @@ export default function ContactForm() {
         className={`${fieldClass} resize-y`}
       />
 
-      <div className="flex items-center justify-end gap-4">
+      <div className="flex flex-wrap items-center justify-end gap-4">
         <AnimatePresence mode="wait">
           {(status === "success" || status === "error") && (
             <motion.p
@@ -72,7 +72,7 @@ export default function ContactForm() {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
-              className={`text-sm ${status === "success" ? "text-lime-700" : "text-red-600"}`}
+              className={`text-sm ${status === "success" ? "text-accent" : "text-red-600"}`}
             >
               {status === "success"
                 ? "Message envoyé, merci !"
@@ -84,7 +84,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSending}
-          className="flex items-center gap-2 rounded-lg bg-neutral-900 px-6 py-3 font-semibold text-white transition-all hover:bg-neutral-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-70"
+          className="flex items-center gap-2 rounded-lg bg-fg px-6 py-3 font-semibold text-white transition-all hover:bg-neutral-700 active:scale-95 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {isSending && (
             <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />

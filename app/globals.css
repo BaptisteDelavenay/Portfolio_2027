@@ -2,6 +2,9 @@
 
 @theme {
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --color-fg: var(--color-neutral-900);
+  --color-muted: var(--color-neutral-500);
+  --color-accent: var(--color-lime-700);
 }
 
 @keyframes walk-across {
@@ -30,4 +33,10 @@
   50% {
     transform: translateY(-4px) rotate(3deg);
   }
+}
+
+/* Scrollbar fine aux couleurs du site (Chrome 121+, Firefox, Safari 18.2+ ; ailleurs scrollbar native) */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neutral-300) transparent;
 }

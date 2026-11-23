@@ -19,7 +19,7 @@ export default function HeroSection() {
       <p>Salut, je m'appelle</p>
 
       <div className="flex items-center gap-3">
-        <h2 className="font-bold text-4xl">Baptiste Delavenay</h2>
+        <h1 className="font-bold text-4xl sm:text-5xl">Baptiste Delavenay</h1>
         <Image src={"/emojis/wave.png"} width={30} height={30} alt="👋"></Image>
       </div>
 
