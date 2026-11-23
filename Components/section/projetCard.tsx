@@ -17,7 +17,7 @@ export default function ProjetCard({id, imageCouverture, titre, technos, descrip
     const technoProjet = technologies.filter(tech => technosValides.includes(tech.id));
 
     return (
-        <div className="bg-card w-full h-[250px] rounded-2xl overflow-hidden active:scale-97 transition-all duration-100" style={{ backgroundImage: `url(${imageCouverture})` }}>
+        <div className="bg-card w-full h-[300px] rounded-2xl overflow-hidden bg-cover bg-center bg-no-repeat active:scale-97 transition-all duration-100" style={{ backgroundImage: `url(${imageCouverture})` }}>
 
             <Link href={`./projet/${id}`}
                 className="group/info relative block w-full h-full p-6 z-10">

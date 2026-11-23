@@ -3,9 +3,9 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 
 const manrope = Manrope({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'], // choisis les graisses dont tu as besoin
-  variable: '--font-manrope', // optionnel, utile si tu veux l'utiliser via une variable CSS
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"], // choisis les graisses dont tu as besoin
+  variable: "--font-manrope", // optionnel, utile si tu veux l'utiliser via une variable CSS
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${manrope.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col px-100">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-clip scroll-smooth">
+        {children}
+      </body>
     </html>
   );
 }

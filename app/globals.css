@@ -3,3 +3,31 @@
 @theme {
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
+
+@keyframes walk-across {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  49.99% {
+    transform: translateX(calc(100vw - 64px)) scaleX(1);
+  }
+  50% {
+    transform: translateX(calc(100vw - 64px)) scaleX(-1);
+  }
+  99.99% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+@keyframes walk-bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(3deg);
+  }
+}
